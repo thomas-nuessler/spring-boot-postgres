@@ -8,5 +8,7 @@ mydb=> \i test.sql
 
 ## Import Postman Collection
 ![import](./import.png)
+
 Import [postgresql-rest-api.json](./postgresql-rest-api.json) to Postman.
+
 ![collection](./collection.png)
