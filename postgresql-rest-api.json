@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "95f94f40-fb2a-4d4b-9a5e-1fdad1f90581",
+		"name": "postgresql-rest-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5066119"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/weathers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/weathers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"weathers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/weather",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"city\": \"ottawa\",\n        \"temp_hi\": 54,\n        \"temp_lo\": 37,\n        \"is_del\": 0,\n        \"date\": \"2024-02-23\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/weather",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"weather"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/weather/4",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"city\": \"ottawa\",\n    \"temp_hi\": 20,\n    \"temp_lo\": 10,\n    \"prcp\": 0.5,\n    \"date\": \"2024-02-23\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/weather/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"weather",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/weather/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/weather/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"weather",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/city?name=ottawa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/city?name=San Francisco",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"city"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "San Francisco"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/city",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ottawa\",\n    \"location\": {\n        \"x\": 45.4,\n        \"y\": -75.7\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/city",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"city"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
