@@ -3,7 +3,12 @@ package com.example.demo.model;
 
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -12,7 +17,12 @@ import java.time.LocalDate;
 @Table(name = "weather")
 public class Weather implements Serializable {
 
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 3318583474472947980L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

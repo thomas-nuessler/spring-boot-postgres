@@ -12,8 +12,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 
+
+
+@SuppressWarnings("rawtypes")
 public class PGpointType implements UserType {
-    @Override
     public int[] sqlTypes() {
         return new int[] {
                 Types.VARCHAR
@@ -35,7 +37,6 @@ public class PGpointType implements UserType {
         return ObjectUtils.nullSafeHashCode(o);
     }
 
-    @Override
     public Object nullSafeGet(ResultSet resultSet, String[] names, SharedSessionContractImplementor sharedSessionContractImplementor, Object o) throws HibernateException, SQLException {
         if (names.length == 1) {
             if (resultSet.wasNull() || resultSet.getObject(names[0]) == null) {
@@ -80,4 +81,17 @@ public class PGpointType implements UserType {
     public Object replace(Object o, Object o1, Object o2) throws HibernateException {
         return o;
     }
+
+	@Override
+	public int getSqlType() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Object nullSafeGet(ResultSet rs, int position, SharedSessionContractImplementor session, Object owner)
+			throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
