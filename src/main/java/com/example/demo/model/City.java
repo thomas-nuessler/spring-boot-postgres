@@ -23,4 +23,20 @@ public class City implements Serializable {
 
     @Type(type = "point")
     private PGpoint location;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name2) {
+		name = name2;
+	}
+
+	public PGpoint getLocation() {
+		return location;
+	}
+
+	public void setLocation(PGpoint location2) {
+		location= location2;	
+	}
 }
